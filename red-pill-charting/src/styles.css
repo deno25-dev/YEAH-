@@ -3,10 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+  --background: 0 0% 0%;          /* #000000 */
+  --foreground: 0 0% 100%;        /* #FFFFFF */
+  --primary: 0 84% 60%;           /* #DC2626 */
 }
 
 body {
-  @apply bg-tv-bg text-gray-100;
+  @apply bg-black text-white;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Chart-specific styles */
+.chart-container {
+  @apply bg-black border border-gray-800 rounded;
+}
+
+.candle-bull {
+  fill: theme('colors.bull');
+}
+
+.candle-bear {
+  fill: theme('colors.bear');
 }

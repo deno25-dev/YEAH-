@@ -1,5 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,10 +6,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        'tv-green': '#10b981',
-        'tv-red': '#ef4444',
-        'tv-bg': '#0f172a',
-        'tv-sidebar': '#1e293b',
+        // YOUR colors from PRD
+        'primary': '#DC2626',      // Your red
+        'black': '#000000',        // Your black
+        'white': '#FFFFFF',        // Your white
+        
+        // Chart colors from PRD
+        'bull': '#10B981',         // Bullish green
+        'bear': '#EF4444',         // Bearish red
+        
+        // Additional UI colors
+        'background': '#0F172A',   // Dark background
+        'sidebar': '#1E293B',      // Sidebar
+        'card': '#334155',         // Cards
       },
     },
   },
